@@ -1,0 +1,25 @@
+.logo{
+    width: 120px;
+}
+
+nav{
+    background-color: brown;
+    display: flex;
+}
+
+.txt{
+    margin-top: 35px;
+    margin-left: 0px;
+}
+
+ul{
+    display: flex;
+    margin-top: 35px;
+    margin-left: 1000px;
+}
+
+li{
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0 20px;
+}
