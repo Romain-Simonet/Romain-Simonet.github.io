@@ -4,74 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junior Conseil Triper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <img class="logo" src="assets/logos/JCT.png">
-        <h1 class="txt">Junior Conseil Triper</h1>
-        <div class="nav-sections">
-            <section class="nav-item">Hébergements</section>
-            <section class="nav-item">Activités</section>
+    <header class="container-fluid bg-white custom-padding header-container">
+        <div class="row align-items-center">
+            <div class="col-auto d-flex align-items-center logo-container">
+                <img src="assets/logos/JCT.png" alt="Logo" class="logo me-3">
+                <span class="fs-4 title">Junior Conseil Triper</span>
+            </div>
+            <div class="col text-end">
+                <nav>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <div class="top-bar"></div>
+                            <a href="#" class="nav-link active" id="hebergements">Hébergements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link inactive" id="activites">Activités</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-primary" id="inscrire">S'inscrire</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <button class="sub_button">S'inscrire</button>
-    </nav>
-    <h2 class="bold">Trouvez votre hébergement pour des vacances de rêve</h2>
-    <h4>En plein centre ville ou en pleine nature</h4>
-    <div class="search_bar">
-        <form>
-            <span class="space">📍</span>
-            <input type="text" placeholder="Marseille, France">
-            <button>Rechercher</button>
-        </form>
-    </div>
-    <div class="filters">
-        <h3>Filtres</h3>
-        <button>Économique</button>
-        <button>Familial</button>
-        <button>Romantique</button>
-        <button>Animaux autorisés</button>
-    </div>
-    <div class="logo_i">
-        <img src="assets/logos/i.png">
-        <h4>Plus de 500 logements sont disponibles dans cette ville</h4>
-    </div>
-    <div class="main-container">
-        <section class="section-container">
-            <h2>Hébergements à Marseille</h2>
-            <div class="grid-3x2">
-                <div class="card"><img src="assets/hebergements/7.jpg" alt="Auberge la Cannebière"><p>Auberge la Cannebière<br>Nuit à partir de 25€<br>★★★★☆</p></div>
-                <div class="card"><img src="assets/hebergements/6.jpg" alt="Hôtel du port"><p>Hôtel du port<br>Nuit à partir de 52€<br>★★★★★</p></div>
-                <div class="card"><img src="assets/hebergements/9.jpg" alt="Hôtel Les mouettes"><p>Hôtel Les mouettes<br>Nuit à partir de 76€<br>★★★★☆</p></div>
-                <div class="card"><img src="assets/hebergements/1.jpg" alt="Hôtel de la mer"><p>Hôtel de la mer<br>Nuit à partir de 46€<br>★★★☆☆</p></div>
-                <div class="card"><img src="assets/hebergements/8.jpg" alt="Auberge Le Panier"><p>Auberge Le Panier<br>Nuit à partir de 23€<br>★★★★☆</p></div>
-                <div class="card"><img src="assets/hebergements/4.jpg" alt="Hôtel chez Amina"><p>Hôtel chez Amina<br>Nuit à partir de 95€<br>★★★★★</p></div>
-                <h3>Afficher plus</h3>
-            </div>
-        </section>
-        <section class="section-container2">
-            <div class="grid-1x3-container">
-                <div class="title-container">
-                    <h3>Les plus populaires</h3>
-                    <img src="assets/logos/stat.png">
+    </header>
+    <div class="nav-bar" id="nav-bar">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    <section class="containeur">
+        <h2 class="bold">Trouvez votre hébergement pour des vacances de rêve</h2>
+        <h4>En plein centre ville ou en pleine nature</h4>
+        <div class="search_bar">
+            <form class="d-flex">
+                <span class="space">📍</span>
+                <input type="text" class="form-control w-50 me-2" placeholder="Marseille, France">
+                <button class="btn btn-primary">Rechercher</button>
+            </form>
+        </div>
+        <div class="filters mt-3 d-flex flex-wrap">
+            <h3 class="me-3">Filtres</h3>
+            <button class="btn btn-outline-primary me-2">Économique</button>
+            <button class="btn btn-outline-primary me-2">Familial</button>
+            <button class="btn btn-outline-primary me-2">Romantique</button>
+            <button class="btn btn-outline-primary">Animaux autorisés</button>
+        </div>
+        <div class="logo_i d-flex align-items-center mt-3">
+            <img src="assets/logos/i.png" class="me-2" alt="Info">
+            <h4>Plus de 500 logements sont disponibles dans cette ville</h4>
+        </div>
+    </section>
+    <div class="container my-5">
+        <div class="row flex-column-reverse flex-lg-row">
+            <!-- Section Hébergements -->
+            <section class="col-lg-8 mb-4">
+                <div class="p-4 rounded shadow bg-light">
+                    <h2 class="mb-4">Hébergements à Marseille</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/hebergements/7.jpg" class="card-img-top" alt="Auberge la Cannebière">
+                                <div class="card-body">
+                                    <h5 class="card-title">Auberge la Cannebière</h5>
+                                    <p class="card-text">Nuit à partir de 25€</p>
+                                    <p class="text-warning">★★★★☆</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/hebergements/6.jpg" class="card-img-top" alt="Hôtel du port">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hôtel du port</h5>
+                                    <p class="card-text">Nuit à partir de 52€</p>
+                                    <p class="text-warning">★★★★★</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/hebergements/9.jpg" class="card-img-top" alt="Hôtel Les mouettes">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hôtel Les mouettes</h5>
+                                    <p class="card-text">Nuit à partir de 76€</p>
+                                    <p class="text-warning">★★★★☆</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/hebergements/1.jpg" class="card-img-top" alt="Hôtel de la mer">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hôtel de la mer</h5>
+                                    <p class="card-text">Nuit à partir de 46€</p>
+                                    <p class="text-warning">★★★☆☆</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/hebergements/8.jpg" class="card-img-top" alt="Auberge Le Panier">
+                                <div class="card-body">
+                                    <h5 class="card-title">Auberge Le Panier</h5>
+                                    <p class="card-text">Nuit à partir de 23€</p>
+                                    <p class="text-warning">★★★★☆</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/hebergements/4.jpg" class="card-img-top" alt="Hôtel chez Amina">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hôtel chez Amina</h5>
+                                    <p class="card-text">Nuit à partir de 95€</p>
+                                    <p class="text-warning">★★★★★</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text_center mt-3">
+                        <h3>Afficher plus</h3>
+                    </div>
                 </div>
-                <div class="grid-1x3">
-                    <div class="card"><img src="assets/hebergements/3.jpg" alt="Hôtel Le soleil du matin"><p>Hôtel Le soleil du matin<br>Nuit à partir de 128€<br><br><br>★★★★★</p></div>
-                    <div class="card"><img src="assets/hebergements/2.jpg" alt="Au cœur de l'eau Chambres d'hôtes"><p>Au cœur de l'eau Chambres d'hôtes<br>Nuit à partir de 71€<br><br><br>★★★★☆</p></div>
-                    <div class="card"><img src="assets/hebergements/5.jpg" alt="Hôtel Tout bleu et Blanc"><p>Hôtel Tout bleu et Blanc<br>Nuit à partir de 68€<br><br><br>★★★★☆</p></div>
+            </section>
+            <section class="col-lg-4 mb-4">
+                <div class="p-4 rounded shadow bg-light">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="mb-0">Les plus populaires</h3>
+                        <img src="assets/logos/stat.png" width="25" alt="Statistiques">
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="card d-flex flex-row align-items-center p-2">
+                                <img src="assets/hebergements/3.jpg" class="rounded me-3" width="100" height="80" alt="Hôtel Le soleil du matin">
+                                <div>
+                                    <h6>Hôtel Le soleil du matin</h6>
+                                    <p class="mb-0">Nuit à partir de 128€</p>
+                                    <p class="text-warning mb-0">★★★★★</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card d-flex flex-row align-items-center p-2">
+                                <img src="assets/hebergements/2.jpg" class="rounded me-3" width="100" height="80" alt="Au cœur de l'eau">
+                                <div>
+                                    <h6>Au cœur de l'eau Chambres d'hôtes</h6>
+                                    <p class="mb-0">Nuit à partir de 71€</p>
+                                    <p class="text-warning mb-0">★★★★☆</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card d-flex flex-row align-items-center p-2">
+                                <img src="assets/hebergements/5.jpg" class="rounded me-3" width="100" height="80" alt="Hôtel Tout bleu et Blanc">
+                                <div>
+                                    <h6>Hôtel Tout bleu et Blanc</h6>
+                                    <p class="mb-0">Nuit à partir de 68€</p>
+                                    <p class="text-warning mb-0">★★★★☆</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
     <section class="section-container3">
         <h2>Activités à Marseille</h2>
-        <div class="grid-3x2">
-            <div class="card"><img src="assets/activites/5.jpg" alt="Vieux Port"></div>
-            <div class="card"><img src="assets/activites/4.jpg" alt="Fort de Pomègues"></div>
-            <div class="card"><img src="assets/activites/1.jpg" alt="Îles du Frioul"></div>
-            <div class="card"><img src="assets/activites/2.jpg" alt="Parc National des Calanques"></div>
-            <div class="card"><img src="assets/activites/6.png" alt="Notre-Dame-de-la-Garde"></div>
-            <div class="card"><img src="assets/activites/3.jpg" alt="Parc Longchamp"></div>
+        <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+                <div class="row">
+                    <div class="col-12 first-image-container">
+                        <div class="card first-image">
+                            <img src="assets/activites/5.jpg" alt="Vieux Port" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Vieux Port</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card">
+                            <img src="assets/activites/4.jpg" alt="Fort de Pomègues" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Fort de Pomègues</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card">
+                            <img src="assets/activites/1.jpg" alt="Îles du Frioul" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Îles du Frioul</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <div class="row">
+                    <div class="col-12 first-image-container">
+                        <div class="card first-image">
+                            <img src="assets/activites/2.jpg" alt="Parc National des Calanques" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Parc National des Calanques</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card">
+                            <img src="assets/activites/6.png" alt="Notre-Dame-de-la-Garde" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card">
+                            <img src="assets/activites/3.jpg" alt="Parc Longchamp" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Parc Longchamp</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="footer">
