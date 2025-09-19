@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mon Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="hero">
+  <img src="photos/photo.jpg" alt="Ma photo" class="avatar">
+
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/romain-simonet-759a2b349/"><img src="photos/linkedin.jpg" alt="LinkedIn"></a>
+    <a href="https://www.instagram.com/rooomaing/"><img src="photos/instagram.png" alt="instagram"></a>
+    <a href="https://outlook.office.com/mail/deeplink/compose?to=romain.simonet@epitech.eu"><img src="photos/outlook.png" alt="Outlook"></a>
+  </div>
+
+  <h1>Romain Simonet</h1>
+  <p>Je suis développeur</p>
+
+  <nav class="menu">
+    <a href="#xp">Expériences</a>
+    <a href="#projets">Projets</a>
+  </nav>
+
+  <div class="scroll-down">▼</div>
+</section>
+
+<div class="content-container">
+  <section id="xp">
+    <h2>Expériences</h2>
+    <div class="experience-card">
+      <h3>Équipier polyvalent – McDonald's</h3>
+      <span class="dates">09/2024 – 09/2025</span>
+      <ul>
+        <li>Travail en équipe et gestion de la pression dans un environnement rapide.</li>
+        <li>Organisation et gestion du temps pour assurer le service clientèle.</li>
+        <li>Apprentissage rapide des procédures et respect des standards.</li>
+        <li>Interaction avec la clientèle et résolution efficace des problèmes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projets">
+    <h2>Projets</h2>
+    <div class="projects-container">
+
+      <div class="project-card open-modal" data-modal="modal-printf">
+        <h3>MY_PRINTF</h3>
+        <p>Reproduction de la fonction “printf” de la library C.</p>
+      </div>
+
+      <div class="project-card open-modal" data-modal="modal-hunter">
+        <h3>MY_HUNTER</h3>
+        <p>Reproduction du jeu “Duck Hunt” en langage CSFML.</p>
+      </div>
+
+      <div class="project-card open-modal" data-modal="modal-mysh">
+        <h3>MYSH</h3>
+        <p>Reproduction d’un shell Unix en langage C.</p>
+      </div>
+
+      <div class="project-card open-modal" data-modal="modal-burp">
+        <h3>BURP</h3>
+        <p>Capture de flags (projet de cybersécurité).</p>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<div id="modal-printf" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>MY_PRINTF – Reproduction de la fonction printf</h3>
+    <p>
+      Projet réalisé à Epitech visant à recréer le comportement de la fonction standard
+      <code>printf</code> du langage C. Le but était de manipuler les fonctions variadiques
+      (<code>stdarg.h</code>) et de comprendre le parsing d’une chaîne de formatage.
+    </p>
+
+    <ul>
+      <li>Gestion des types : %d, %i, %b, %x, %X, %s, %c, %%.</li>
+      <li>Manipulation des arguments variables avec <code>va_list</code>.</li>
+      <li>Optimisation de l’affichage pour des performances correctes.</li>
+    </ul>  
+  </div>
+</div>
+
+<div id="modal-hunter" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>MY_HUNTER – Reproduction du jeu "Duck Hunt"</h3>
+    <p>
+      Projet réalisé à Epitech visant à recréer une version simplifiée du célèbre
+      jeu d’arcade <strong>Duck Hunt</strong> en langage C avec la bibliothèque
+      <strong>CSFML</strong>. Le but était d'apprendre les bases de la
+      programmation graphique et du développement de jeux.
+    </p>
+
+    <ul>
+      <li>Animation d’un canard qui traverse l’écran.</li>
+      <li>Interaction : clic de souris pour "tirer" sur le canard et marquer des points.</li>
+      <li>Gestion du framerate et de la boucle de jeu.</li>
+      <li>Ajout d’effets sonores pour les tirs et l’ambiance.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-mysh" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>MYSH – Reproduction d’un shell Unix</h3>
+    <p>
+      Projet réalisé à Epitech consistant à coder un <strong>mini-shell</strong> en C,
+      reproduisant les fonctionnalités de base d’un terminal Unix.
+    </p>
+
+    <ul>
+      <li>Exécution de commandes externes grâce aux appels système <code>fork()</code> et <code>execve()</code>.</li>
+      <li>Commandes internes : <code>cd</code>, <code>exit</code>, <code>env</code>.</li>
+      <li>Gestion de la variable <code>PATH</code> et des arguments multiples.</li>
+      <li>Affichage d’erreurs claires en cas de commande introuvable ou d’arguments invalides.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-burp" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>BURP – Projet Capture The Flag</h3>
+    <p>
+      Projet orienté cybersécurité visant à résoudre des challenges CTF,
+      afin de comprendre et exploiter des vulnérabilités dans des systèmes
+      et applications.
+    </p>
+
+    <ul>
+      <li>Exploitation de failles Web : XSS, injections SQL.</li>
+      <li>Analyse de fichiers binaires pour extraire des informations.</li>
+      <li>Développement de scripts pour automatiser la récupération des flags.</li>
+      <li>Compréhension des protocoles réseau et sécurisation des systèmes.</li>
+    </ul>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
