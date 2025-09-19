@@ -183,3 +183,35 @@ section h2 {
 .close:hover {
   color: #ff0000;
 }
+
+.duckhunt {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 15px auto;
+}
+
+.tryhackme {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 15px auto;
+}
+
+.mysh {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 15px auto;
+}
+
+.printf {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 15px auto;
+}
